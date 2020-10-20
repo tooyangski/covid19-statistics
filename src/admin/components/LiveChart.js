@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const LiveChart = (props) => {
@@ -68,25 +69,27 @@ const LiveChart = (props) => {
       </Modal.Header>
       <Modal.Body>
         {targetCountry && (
-          <LineChart
-            width={700}
-            height={300}
-            data={chartData}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
+          <div style={{ width: "100%", height: 300 }}>
+            <ResponsiveContainer>
+              <LineChart
+                data={chartData}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 20,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
 
-            <Line type="monotone" dataKey="cases" stroke="#82ca9d" />
-          </LineChart>
+                <Line type="monotone" dataKey="cases" stroke="#82ca9d" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         )}
       </Modal.Body>
       <Modal.Footer>

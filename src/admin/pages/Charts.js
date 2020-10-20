@@ -71,9 +71,9 @@ const Dashboard = (props) => {
       {isLoading && <LoadingSpinner />}
 
       <h2>Number of cases per country</h2>
-      {loadedCountries.map((set) => {
+      {loadedCountries.map((set, index) => {
         return (
-          <div style={{ width: "100%", height: 300 }}>
+          <div key={index} style={{ width: "100%", height: 300 }}>
             <ResponsiveContainer>
               <BarChart
                 data={set}
