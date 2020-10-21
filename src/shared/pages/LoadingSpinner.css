@@ -1,26 +1,32 @@
-.loader-wrapper {
+#overlay {
+  background: #ffffff;
+  color: #666666;
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.267);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 25%;
+  opacity: 0.8;
 }
 
-.loader-wrapper .loader {
-  height: 80px;
-  width: 80px;
-  border: 10px solid #0099ff;
-  border-color: #0099ff transparent #0099ff transparent;
+.spinner {
+  margin: 0 auto;
+  height: 64px;
+  width: 64px;
+  animation: rotate 0.8s infinite linear;
+  border: 5px solid firebrick;
+  border-right-color: transparent;
+  border-radius: 50%;
 }
-.loader-wrapper.is-active {
-  opacity: 1;
-  z-index: 1;
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
