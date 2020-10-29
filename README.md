@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Deployed URL
+https://covid19-statistics-42321.firebaseapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
